@@ -30,6 +30,7 @@ public class ListDataFavourite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_data);
+        getSupportActionBar().hide();
         tvnodata = (TextView) findViewById(R.id.tvnodata);
         recyclerView = (RecyclerView) findViewById(R.id.rvdata);
 
@@ -68,8 +69,5 @@ public class ListDataFavourite extends AppCompatActivity {
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(adapter);
         }
-
-
     }
-
 }

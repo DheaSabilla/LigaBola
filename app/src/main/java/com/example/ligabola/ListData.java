@@ -24,7 +24,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ListData extends AppCompatActivity {
+    public class ListData extends AppCompatActivity {
     TextView tvnodata;
     ProgressDialog dialog;
     RecyclerView recyclerView;
@@ -121,6 +121,6 @@ public class ListData extends AppCompatActivity {
                         Log.d("errorku", "onError errorDetail : " + error.getErrorDetail());
                     }
                 });
-    }
+        }
 
-}
+    }

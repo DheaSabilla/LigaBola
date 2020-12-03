@@ -1,4 +1,6 @@
 package com.example.ligabola;
+
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,7 +36,7 @@ public class DetailLiga extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detail_bola);
+        setContentView(R.layout.detail_liga);
         extras = getIntent().getExtras();
         tvjudul = (TextView)findViewById(R.id.tvjudul);
         tvdesc = (TextView)findViewById(R.id.txtdeskripsi);
@@ -60,9 +62,9 @@ public class DetailLiga extends AppCompatActivity {
         }
 
         //Set up Realm
-        Realm.init(DetailLiga.this);
+        Realm.init( DetailLiga.this );
         RealmConfiguration configuration = new RealmConfiguration.Builder().build();
-        realm = Realm.getInstance(configuration);
+        realm = Realm.getInstance( configuration );
 
         btnbookmark.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +77,8 @@ public class DetailLiga extends AppCompatActivity {
 
                 realmHelper = new RealmHelper(realm);
                 realmHelper.save(timModel);
+
+
             }
         });
     }

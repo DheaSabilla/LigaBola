@@ -1,6 +1,10 @@
 package com.example.ligabola;
-public class Model {
-    //https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg
+
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
+public class Model extends RealmObject {
+    @PrimaryKey
     String strTeam;
     String strLeague;
     String strTeamBadge;

@@ -9,7 +9,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.Target;
 
 public class DetailFavorite extends AppCompatActivity {
-
     Bundle extras;
     String title;
     String date;
@@ -25,6 +24,7 @@ public class DetailFavorite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_favorite);
+        getSupportActionBar().hide();
         extras = getIntent().getExtras();
         tvjudulFav = findViewById(R.id.tvjudul);
         txtdeskripsiFav = findViewById(R.id.txtdeskripsi);
